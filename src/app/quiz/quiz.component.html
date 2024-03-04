@@ -13,8 +13,17 @@
           <img class="center" [src]="quizService.rootUrl+'/Images/'+quizService.qns[quizService.qnProgress].ImageName"
             style="width:350px;height:200px">
         </div>
+
       </div>
-      <div class="card-action">
+      <div >
+        <ng-container *ngIf="quizService.qns[quizService.qnProgress].codeBlock !=null">
+          <pre class="white">
+            <code class="language-python" >
+              {{quizService.qns[quizService.qnProgress].codeBlock}}
+            </code>
+          </pre >
+        </ng-container>
+
         <ul class="collection answer">
           <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].optionList;let i = index">
             <li *ngIf="option != null" class="collection-item"
