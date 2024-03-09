@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Code Formatting Example</title>
+
+  <!-- Include locally hosted Prettify CSS -->
+  <link rel="stylesheet" type="text/css" href="./google-code-prettify/prettify.css">
+
+  <!-- Include locally hosted Prettify JavaScript -->
+  <script type="text/javascript" src="./google-code-prettify/prettify.js"></script>
+</head>
+<body>
+
+  <pre class="prettyprint">
+    <script>
+      const unformattedCode = 'def greet(): print("Hello, World!")';
+      const formattedCode = JSON.stringify(unformattedCode, null, 2);
+      document.write(`<code class="language-python">${formattedCode}</code>`);
+    </script>
+  </pre>
+
+  <!-- Run PR.prettyPrint() once the page has finished loading -->
+  <script>
+    window.onload = function () {
+      PR.prettyPrint();
+    };
+  </script>
+
+</body>
+</html>
